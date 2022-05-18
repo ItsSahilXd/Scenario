@@ -19,6 +19,7 @@ ROMANTIC_STRINGS = [
     I hope it's clear to you!
 
     So if you're really kanging this atleast don't remove this line it takes a lot of time to code things.
+    Coded by : @CoderX on telegram...
 """
 
 @scenario.on_message(filters.command("romantic"))
