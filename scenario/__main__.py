@@ -135,21 +135,26 @@ Haven't slept since: {}
 buttons = [
     [
                         InlineKeyboardButton(
-                            text=f"Add {BOT_NAME} To Your Group",
+                            text=f"⚓ ❄️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ❄️ ⚓",
                             url="https://t.me/ScenarioXbot?startgroup=true")
                     ],
                    [
-                       InlineKeyboardButton(text="📕 Help 📖", callback_data="help_back"),
-                       InlineKeyboardButton(text="⚔️ Inline ⚔️", switch_inline_query_current_chat=""),
+                       InlineKeyboardButton(text="🔰 ᴀʙᴏᴜᴛ 🔰", callback_data="scenario_"),
+                       InlineKeyboardButton(text="⚔️ ɪɴʟɪɴᴇ ⚔️", switch_inline_query_current_chat=""),
                      ],
                     [                  
                        InlineKeyboardButton(
-                             text="😌 Support 😌",
+                             text="✨ sᴜᴘᴘᴏʀᴛ ✨",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                        InlineKeyboardButton(
-                             text="✨ Updates ✨",
+                             text="✨ ᴜᴩᴅᴀᴛᴇs ✨",
                              url=f"https://t.me/{UPDATES_CHANNEL}")
-                     ], 
+                     ],
+                     [
+                         InlineKeyboardButton(
+                             text="🔰 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs 🔰", callback_data="help_back"
+                         ),
+                     ],
     ]
 
                     
@@ -342,7 +347,27 @@ def scenario_all_callback(update, context):
                 timeout=60,
             )
 
-
+def scenario_about_callback(update, context):
+    query = update.callback_query
+    first_name = update.effective_user.first_name
+    if query.data == "scenario_":
+        query.message.edit_text(
+            text=f"Hello dear **{first_name}**, My name is Scenario. A Powerful Telegram Group Management Bot.\n My developer - @TeamScenario\n.\n\n*If you have any Question, You can join our support chat. \nMy developer will help you. \nCheck Link Below*",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Support", url=f"t.me/{SUPPORT_CHAT}"
+                        ),
+                        InlineKeyboardButton(
+                            text="Updates", url=f"t.me/{UPDATES_CHANNEL}"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Home", callback_data="all_cmds")],
+                ]
+            ),
+        )
 
 # for test purposes
 def error_callback(update, context):
@@ -728,12 +753,12 @@ def main():
     settings_handler = DisableAbleCommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_", run_async=True)
     all_modules_callback = CallbackQueryHandler(scenario_all_callback, pattern=r"all_cmds", run_async=True)
-
+    scenario_about_handler = CallbackQueryHandler(scenario_about_callback, pattern=r"scenario_", run_async=True)
     data_callback_handler = CallbackQueryHandler(scenario_callback_data, pattern=r"scenario_", run_async=True)
     donate_handler = DisableAbleCommandHandler("donate", donate, run_async=True)
     migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats, run_async=True)
 
-    # dispatcher.add_handler(test_handler)
+    dispatcher.add_handler(scenario_about_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(all_modules_callback)
     dispatcher.add_handler(help_handler)
