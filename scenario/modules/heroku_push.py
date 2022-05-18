@@ -170,7 +170,7 @@ async def update_(client, message):
             )
     response = await message.reply_text("**» sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ᴜᴩᴅᴀᴛᴇs ᴏɴ ᴜᴩsᴛʀᴇᴀᴍ ʀᴇᴩᴏ...**")
     try:
-        repo = UPSTREAM_REPO
+        repo = Repo()
     except GitCommandError:
         return await response.edit("**» ɢɪᴛ ᴄᴏᴍᴍᴀɴᴅ ᴇʀʀᴏʀ.**")
     except InvalidGitRepositoryError:
