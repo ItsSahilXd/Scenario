@@ -50,7 +50,17 @@
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
-        "required": false
+        "required": true,
+      },
+      "UPSTREAM_REPO": {
+        "description": "Upstream repo for /update command, don't change.",
+        "required": true,
+        "value": "https://github.com/TeamScenario/Scenario"
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "Upstream branch",
+        "required": true,
+        "value": "TeamScenario"
       },
       "OWNER_USERNAME": {
          "description": "Your username without @",
