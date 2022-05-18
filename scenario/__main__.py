@@ -139,7 +139,7 @@ buttons = [
                             url="https://t.me/ScenarioXbot?startgroup=true")
                     ],
                    [
-                       InlineKeyboardButton(text="🔰 ᴀʙᴏᴜᴛ 🔰", callback_data="scenario_"),
+                       InlineKeyboardButton(text="☘️ ᴀʙᴏᴜᴛ ☘️", callback_data="scenario_"),
                        InlineKeyboardButton(text="⚔️ ɪɴʟɪɴᴇ ⚔️", switch_inline_query_current_chat=""),
                      ],
                     [                  
@@ -409,7 +409,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "╒═══「 *{}* module: 」\n".format(
+                "╒═══「☘️ *{}* module help ☘️」═══\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
