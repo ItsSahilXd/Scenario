@@ -1,8 +1,6 @@
 import random
 import asyncio
-from scenario import dispatcher
 from pyrogram import filters
-from scenario.modules.disable import DisableAbleCommandHandler
 from scenario import pgram as scenario
 
 ROMANTIC_STRINGS = [
@@ -23,12 +21,9 @@ ROMANTIC_STRINGS = [
     So if you're really kanging this atleast don't remove this line it takes a lot of time to code things.
 """
 
+@scenario.on_message(filters.command("romantic"))
 async def lel(bot, message):
     ran = random.choice(ROMANTIC_STRINGS)
     await bot.send_chat_action(message.chat.id, "typing")
     await asyncio.sleep(1.5)
     return await message.reply_text(text=ran)
-
-ROMANTIC_HANDLER = DisableAbleCommandHandler("romantic", lel)
-
-dispatcher.add_handler(ROMANTIC_HANDLER)
