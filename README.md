@@ -7,6 +7,8 @@
 > Scenario is the most Advanced telegram bot to manage your groups. 
 Demo bot - @anonymous_4_robot
 
+> To update your app on heroku use /update command!
+
 ## How To Deploy 
 <details>
 <summary><b>🔗 Deploy to Heroku</b></summary>
