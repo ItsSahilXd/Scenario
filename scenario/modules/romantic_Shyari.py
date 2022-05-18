@@ -1,5 +1,6 @@
 import random
 import asyncio
+from scenario import dispatcher
 from pyrogram import filters
 from scenario.modules.disable import DisableAbleCommandHandler
 from scenario import pgram as scenario
