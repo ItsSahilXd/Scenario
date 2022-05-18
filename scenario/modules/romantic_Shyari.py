@@ -1,8 +1,8 @@
 import random
-from telegram.ext import run_async, Filters
-from telegram import Message, Chat, Update, Bot, MessageEntity
-from scenario import dispatcher
+import asyncio
+from pyrogram import filters
 from scenario.modules.disable import DisableAbleCommandHandler
+from scenario import pgram as scenario
 
 ROMANTIC_STRINGS = [
                      'Meri chahat dekhni hai? \nTo mere dil par apna dil rakhkar dekh\nteri dhadkan naa bhadjaye to meri mohabbat thukra dena...',
@@ -22,19 +22,12 @@ ROMANTIC_STRINGS = [
     So if you're really kanging this atleast don't remove this line it takes a lot of time to code things.
 """
 
-# If you upgrade ptb version it'll show TelegramDeprecationWarning: The @run_async decorator is deprecated. Use the `run_async` parameter of your Handler or `Dispatcher.run_async` instead.
-# I suggest don't upgrade ptb
-                   
-@run_async
-def romantic(bot: Bot, update: Update):
-    bot.sendChatAction(update.effective_chat.id, "typing") # Bot typing before send messages
-    message = update.effective_message
-    if message.reply_to_message:
-      message.reply_to_message.reply_text(random.choice(ROMANTIC_STRINGS))
-    else:
-      message.reply_text(random.choice(ROMANTIC_STRINGS))
+async def lel(bot, message):
+    ran = random.choice(ROMANTIC_STRINGS)
+    await bot.send_chat_action(message.chat.id, "typing")
+    await asyncio.sleep(1.5)
+    return await message.reply_text(text=ran)
 
-
-ROMANTIC_HANDLER = DisableAbleCommandHandler("romantic", romantic)
+ROMANTIC_HANDLER = DisableAbleCommandHandler("romantic", lel)
 
 dispatcher.add_handler(ROMANTIC_HANDLER)
