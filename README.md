@@ -4,7 +4,7 @@
 <span style="color:blue">some Hello text</span>. 
 <br>
 
-# Things to be noted 
+# <mark>Things to be noted</mark>
 
 <mark>1. There are 2 app.json format in repository
    first is named as app it's for pros like you 
