@@ -5,7 +5,7 @@
 <br>
 
 # Things to be noted 
-
+```json
 1. There are 2 app.json format in repository
    first is named as app it's for pros like you 
    and another one app.json for beginners 
@@ -13,6 +13,7 @@
    before that delete existing one.
 
 2. To update your app on heroku use /update command if error use /gitpull
+```
 
 > Scenario is the most Advanced telegram bot to manage your groups. 
 Demo bot - @anonymous_4_robot
