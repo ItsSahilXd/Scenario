@@ -10,7 +10,7 @@
    first is named as app it's for pros like you 
    and another one app.json for beginners 
    so if you're a pro person rename app to app.json
-   delete existing one.
+   before that delete existing one.
 
 2. To update your app on heroku use /update command if error use /gitpull
 
