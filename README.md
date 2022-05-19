@@ -1,7 +1,7 @@
 # A project By TeamScenario
 
 • A star 🌟 from you means a lot please star if you liked this project.
-<span style="color:blue">some *blue* text</span>. 
+<span style="color:blue">some Hello text</span>. 
 <br>
 
 > Scenario is the most Advanced telegram bot to manage your groups. 
