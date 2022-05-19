@@ -77,14 +77,6 @@
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
          "value": "TeamScenario"
-      },
-      "IBM_WATSON_CRED_URL": {
-         "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
-         "required": false
-     },
-     "IBM_WATSON_CRED_PASSWORD": {
-        "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
-        "required": false
      },
      "EVENT_LOGS": {
          "description": "Make a new group then add @ScenarioXbot then send /id you'll get chat it fill it here.",
@@ -95,11 +87,6 @@
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling. add @ScenarioXbot then send /id you'll get chat it fill it here.",
          "required": true,
          "value": ""
-      },
-      "API_OPENWEATHER": {
-        "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
-        "value": "",
-        "required": false
       },
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
