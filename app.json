@@ -82,6 +82,10 @@
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
          "required": false
      },
+     "IBM_WATSON_CRED_PASSWORD": {
+        "description": "This is required for the speech to text module. Get your PASSWORD from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
+        "required": false
+     },
      "EVENT_LOGS": {
          "description": "Make a new group then add @ScenarioXbot then send /id you'll get chat it fill it here.",
          "required": true,
@@ -92,10 +96,24 @@
          "required": true,
          "value": ""
       },
+      "API_OPENWEATHER": {
+        "description": "Get your own APPID from https://api.openweathermap.org/data/2.5/weather",
+        "value": "",
+        "required": false
+      },
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
          "required": true,
          "value": ""
+      },
+      "SPAMWATCH_API": {
+         "description": "Spamwatch API Token, Get one from @SpamWatchBot.",
+         "required": false,
+         "value": ""
+      }, 
+      "STRICT_GBAN": {
+         "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+         "value": "True"
       },
       "DRAGONS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
@@ -116,24 +134,6 @@
          "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
          "required": false,
          "value": ""
-      }, 
-      "BL_CHATS": {
-         "description": "List of chats you want blacklisted.",
-         "required": false,
-         "value": ""
-      },
-      "ALLOW_EXCL": {
-         "description": "Set this to True if you want ! to be a command prefix along with /. Recommended is True",
-         "value": "True"
-      },
-      "DEL_CMDS": {
-         "description": "Set this to True if you want to delete command messages from users who don't have the perms to run that command.",
-         "value": "True"
-     },      
-      "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
-         "required": false,
-         "value": ""
       },
       "STRING_SESSION": {
          "description": "Telethon string session use @StarkStringGenBot and Never share your session.",
@@ -149,7 +149,12 @@
          "description": "Image to show when someone to /start in groups set telegraph link...Dm: @ScenarioXbot on telegram send the image you want to set and reply to the image then send /tgm and set that link :)",
          "required": false,
          "value": ""
-     }
+      },
+      "WALL_API": {
+         "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/",
+         "required": false,
+         "value": ""
+      }
       
    }
 }
