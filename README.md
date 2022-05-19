@@ -19,7 +19,7 @@
 | Vars | from where to get |
 | ----------- | ----------- |
 | API_ID | Get it from my.telegram.org |
-| API_ID | Get it from my.telegram.org |
+| API_HASH | Get it from my.telegram.org |
 | TOKEN | from @BotFather |
 | OWNER_ID | DM @ScenarioXbot and send /id |
 | DEV_USERS | same as OWNER_ID |
