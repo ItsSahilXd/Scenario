@@ -77,6 +77,10 @@ Start with ```python -m scenario```
 </details>
   
 
+## TODO
+- [ ] Better readme
+- [x] Less vars to fill
+- [ ] Design improvement
 
 [^TeamScenario]
 [^TeamScenario]: ©2022 TeamScenario All rights reserved!
