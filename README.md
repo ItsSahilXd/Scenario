@@ -14,6 +14,15 @@
 
 2. To update your app on heroku use /update command if error use /gitpull</mark>
 
+| Vars | from where to get |
+| ----------- | ----------- |
+| API_ID | Get it from my.telegram.org |
+| API_ID | Get it from my.telegram.org |
+| TOKEN | from @BotFather |
+| OWNER_ID | DM @ScenarioXbot and send /id |
+| DEV_USERS | same as OWNER_ID |
+
+
 > Scenario is the most Advanced telegram bot to manage your groups. 
 Demo bot - @anonymous_4_robot
 
