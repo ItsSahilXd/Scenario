@@ -78,6 +78,6 @@ Start with ```python -m scenario```
   
 
 
-[^1]
-[^1]: ©2022 TeamScenario All rights reserved!
+[^]
+[^]: ©2022 TeamScenario All rights reserved!
 
