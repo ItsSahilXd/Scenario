@@ -56,13 +56,14 @@
       },
       "UPSTREAM_REPO": {
         "description": "Upstream repo for /update command, don't change.",
-        "required": true
+        "required": true,
         "value": "https://github.com/TeamScenario/Scenario"
       },
       "UPSTREAM_BRANCH": {
         "description": "Upstream branch",
-        "required": true
+        "required": true,
         "value": "TeamScenario"
+      },
       "OWNER_USERNAME": {
          "description": "Your username without @",
          "required": true,
