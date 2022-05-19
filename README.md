@@ -14,6 +14,8 @@
 
 2. To update your app on heroku use /update command if error use /gitpull</mark>
 
+### Most important vars
+
 | Vars | from where to get |
 | ----------- | ----------- |
 | API_ID | Get it from my.telegram.org |
