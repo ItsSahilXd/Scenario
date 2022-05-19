@@ -4,11 +4,13 @@
       "keywords": [
          "telegram",
          "anime",
+         "Scenario",
+         "Powerful",
          "group",
          "manager"
       ],
     
-   "logo":    "https://telegra.ph/file/1fd611fa541d5f8b9fefe.jpg",  
+   "logo":    "https://telegra.ph/file/b2f2121639a12d557103c.jpg",  
    "repository": "https://github.com/TeamScenario/Scenario",
    "addons": [
           {
@@ -52,6 +54,15 @@
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
         "required": true
       },
+      "UPSTREAM_REPO": {
+        "description": "Upstream repo for /update command, don't change.",
+        "required": true,
+        "value": "https://github.com/TeamScenario/Scenario"
+      },
+      "UPSTREAM_BRANCH": {
+        "description": "Upstream branch",
+        "required": true,
+        "value": "TeamScenario"
       "OWNER_USERNAME": {
          "description": "Your username without @",
          "required": true,
